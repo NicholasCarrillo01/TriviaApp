@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,10 +50,15 @@ public class QuestionCreatorFragment extends Fragment {
     @OnClick(R.id.save_question_button)
     protected void addQuestion() {
 
-      if (question.getText().toString().isEmpty() || correctanswer.getText().toString().
+      if (question.getText().toString().isEmpty() || correctanswer.getText().toString().isEmpty() ||
+              firstwronganswerInput.getText().toString().isEmpty() || secondwronganswerinput.getText().toString().isEmpty() ||
+              thirdWrongAnswerinput.getText().toString().isEmpty()  ) {
 
+          Toast.makeText(getActivity(), "All fields are required!", Toast.LENGTH_SHORT).show();
+      }
 
-        //  gets user input from the edittext and saves them as a variable
+    } else {
+          //  gets user input from the edittext and saves them as a variable
     String questionTitle = question.getText().toString();
     String correctAnswer = correctanswer.getText().toString();
     String firstWrongAnswer = firstwronganswerInput.getText().toString();
@@ -62,7 +68,7 @@ public class QuestionCreatorFragment extends Fragment {
 
     Question question = new Question(questionTitle, correctAnswer, firstWrongAnswer, secondWrongAnswer, thirdWongAnswer);
 //  sends question object we just created to the callback method to be saved
-    callback.questionSaved(question);
+    callback.questionsaved(question);
     }
 
 
