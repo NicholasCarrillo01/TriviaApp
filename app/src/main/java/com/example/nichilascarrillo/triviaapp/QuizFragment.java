@@ -7,38 +7,31 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class QuizFragment extends Fragment {
 
 
     @BindView(R.id.correct_answer_button)
-    protected void buttonOneClicked() {
-
-    }
+    protected Button correctAnswerButton;
 
     @BindView(R.id.first_wrong_answer_button)
-    protected void buttonTwoClicked() {
-
-    }
+    protected Button wrongAnswerButtonOne;
 
     @BindView(R.id.second_wrong_answer_button)
-    protected void buttonTwoClicked() {
-
-    }
+    protected Button WrongAnswerButtonTwo;
 
     @BindView(R.id.third_wrong_answer_button)
-    protected void thirdWrongAnswerButton() {
-
-    }
+    protected Button WrongAnswerButtonThree;
 
     @BindView(R.id.next_question_button)
-    protected void nextQuestionButton() {
+    protected Button nextQuestionButtonone;
 
-    }
 
 
     @Nullable
@@ -59,6 +52,31 @@ public class QuizFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
 
+
+    }
+
+    @OnClick(R.id.correct_answer_button)
+    protected void buttonzeroClicked() {
+
+    }
+
+    @OnClick(R.id.first_wrong_answer_button)
+    protected void buttonOneClicked() {
+
+    }
+
+    @OnClick(R.id.second_wrong_answer_button)
+    protected void buttonTwoClicked() {
+
+    }
+
+    @OnClick(R.id.third_wrong_answer_button)
+    protected void thirdWrongAnswerButton() {
+
+    }
+
+    @OnClick(R.id.next_question_button)
+    protected void nextQuestionButton() {
 
     }
 

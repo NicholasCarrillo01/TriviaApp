@@ -21,12 +21,13 @@ public class QuestionCreatorFragment extends Fragment {
     @BindView(R.id.correct_answer_edittext)
     protected EditText correctanswer;
     @BindView(R.id.first_wrong_answer_edittext)
-    protected EditText firstwronganswer;
+    protected EditText firstwronganswerInput;
     @BindView(R.id.second_wrong_answer_editext)
-    protected EditText secondwronganswer;
+    protected EditText secondwronganswerinput;
     @BindView(R.id.third_wrong_answer_edittext)
-    protected EditText thirdwronganswer;
-
+    protected EditText thirdWrongAnswerinput;
+            ;
+    private Callback callback;
 
 
     @Nullable
@@ -48,8 +49,32 @@ public class QuestionCreatorFragment extends Fragment {
     @OnClick(R.id.save_question_button)
     protected void addQuestion() {
 
+      if (question.getText().toString().isEmpty() || correctanswer.getText().toString().
+
+
+        //  gets user input from the edittext and saves them as a variable
     String questionTitle = question.getText().toString();
-    String correctAnswer
+    String correctAnswer = correctanswer.getText().toString();
+    String firstWrongAnswer = firstwronganswerInput.getText().toString();
+    String secondWrongAnswer = secondwronganswerinput.getText().toString();
+    String thirdWongAnswer =  thirdWrongAnswerinput.getText().toString();
+
+
+    Question question = new Question(questionTitle, correctAnswer, firstWrongAnswer, secondWrongAnswer, thirdWongAnswer);
+//  sends question object we just created to the callback method to be saved
+    callback.questionSaved(question);
+    }
+
+
+    public void attachParent(Callback callback) {
+        this.callback = callback;
+    }
+
+
+    public interface Callback {
+
+
+    void questionSaved(Question question);
 
     }
 

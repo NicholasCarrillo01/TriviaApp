@@ -1,6 +1,6 @@
 package com.example.nichilascarrillo.triviaapp;
 
-public class question {
+public class Question {
 
 
     private String question;
@@ -10,7 +10,7 @@ public class question {
     private String thirdWrongAnswer;
 
 
-    public question(String question, String correctAnswer, String firstWrongAnswer, String secondWrongAnswer, String thirdWrongAnswer) {
+    public Question(String question, String correctAnswer, String firstWrongAnswer, String secondWrongAnswer, String thirdWrongAnswer) {
         this.question = question;
         this.correctAnswer = correctAnswer;
         this.firstWrongAnswer = firstWrongAnswer;
