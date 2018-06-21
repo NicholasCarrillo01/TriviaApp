@@ -22,46 +22,54 @@
         android:id="@+id/correct_answer_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/first_wrong_answer_button"
         app:layout_constraintEnd_toEndOf="@+id/first_wrong_answer_button"
-        app:layout_constraintStart_toStartOf="@+id/first_wrong_answer_button"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintStart_toStartOf="@+id/first_wrong_answer_button" />
 
     <Button
         android:id="@+id/first_wrong_answer_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/second_wrong_answer_button"
         app:layout_constraintEnd_toEndOf="@+id/second_wrong_answer_button"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/second_wrong_answer_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <Button
         android:id="@+id/second_wrong_answer_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/third_wrong_answer_button"
         app:layout_constraintEnd_toEndOf="@+id/third_wrong_answer_button"
-        app:layout_constraintStart_toStartOf="@+id/third_wrong_answer_button"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/third_wrong_answer_button" />
 
     <Button
         android:id="@+id/third_wrong_answer_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
         android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/next_question_button"
         app:layout_constraintEnd_toEndOf="@+id/next_question_button"
-        app:layout_constraintStart_toStartOf="@+id/next_question_button"
-        tools:layout_editor_absoluteY="348dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/next_question_button" />
 
     <Button
         android:id="@+id/next_question_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Button"
+        android:text="SUBMIT"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

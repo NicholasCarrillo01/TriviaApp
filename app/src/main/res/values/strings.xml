@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Trivia App</string>
+    <string name="wrong_answer_text">wrong! the correct answer is %1$s!</string>
+    <string name="correct">correct</string>
+    <string name="number_of_correct_answers">You answered %1$d questions correctly!</string>
 </resources>
